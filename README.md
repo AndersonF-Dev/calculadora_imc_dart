@@ -49,11 +49,13 @@ flutter test
 ## 🚀 Funcionalidades
 
 ### Nova Versão Mobile / UI (Branch `feat/interface-app`)
-Nesta branch, o desafio foi totalmente concluído seguindo o checklist solicitado:
-- **Criar classe IMC (Peso / Altura):** Implementação do modelo de dados para estruturar e armazenar as informações de cada cálculo.
-- **Ler dados no app:** Interface gráfica amigável com campos de captura (`TextField`) para Nome, Peso e Altura, eliminando a necessidade do terminal.
-- **Calcular IMC:** Integração da lógica de cálculo e classificação com tratamento visual de exceções via `SnackBar`.
-- **Exibir em uma lista:** Apresentação dinâmica do histórico de resultados utilizando o componente `ListView.builder`.
+Nesta branch, o desafio foi totalmente concluído seguindo o checklist solicitado e aplicando melhorias de experiência do usuário:
+- **Pasta Model criada:** Implementação da classe `ImcModel` para estruturar e mapear as informações de cada cálculo.
+- **Leitura de Dados Dinâmica:** Interface gráfica amigável com campos de captura (`TextField`) com tratamento visual de erros via `SnackBar`.
+- **Altura nas Configurações:** Tela dedicada de Configurações de Perfil (acessível pelo ícone ⚙️) para definir e salvar a altura padrão do usuário.
+- **Gravação de Dados com Hive:** Persistência local robusta e ultra rápida utilizando o banco NoSQL **Hive**. Os dados não são perdidos ao fechar o app.
+- **Proteção contra Duplicados:** O aplicativo valida de forma inteligente se o perfil já existe. Se existir, ele atualiza o peso e o IMC enviando uma notificação de sucesso na tela; se não existir, cria um novo perfil.
+- **Exibição e Remoção em Lista:** Apresentação dinâmica do histórico utilizando `ListView.builder` com suporte a remoção individual de registros direto no banco através de um botão de lixeira.
 
 ---
 
